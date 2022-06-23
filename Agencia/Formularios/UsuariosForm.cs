@@ -46,6 +46,13 @@ namespace Agencia.Formularios
             try
             {
                 usuario = dgvUsuarios.CurrentRow.DataBoundItem as Usuarios;
+                if (addEdit != null)
+                {
+                    addEdit = null;
+                }
+                addEdit = new AddEditUsuarios();
+                addEdit.FormClosed += AddEdit_FormClosed;
+
                 addEdit.CurrrentUser = usuario;
                 addEdit.ShowDialog();
             }
@@ -53,6 +60,11 @@ namespace Agencia.Formularios
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void AddEdit_FormClosed1(object sender, FormClosedEventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         private void btnCrear_Click(object sender, EventArgs e)

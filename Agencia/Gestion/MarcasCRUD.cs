@@ -55,5 +55,33 @@ namespace Agencia.Gestion
             }
         }
 
+        public void EditarMarcas(int id, string nombre)
+        {
+            using (SqlConnection conexion = new SqlConnection(connectionString))
+            {
+                conexion.Open();
+                string comando = string.Format("UPDATE Marcas SET Nombre = '{0}' WHERE Id = {1}", nombre, id);
+
+                using (SqlCommand cmd = new SqlCommand(comando, conexion))
+                {
+                    var response = cmd.ExecuteNonQuery();
+                }
+                conexion.Close();
+            }
+        }
+
+        public void BorrarMarcas(int id)
+        {
+            using (SqlConnection conexion = new SqlConnection(connectionString))
+            {
+                conexion.Open();
+                string comando = "DELETE FROM Marcas WHERE Id = {0};";
+                SqlCommand command = new SqlCommand(string.Format(comando, id), conexion);
+
+                var response = command.ExecuteNonQuery();
+                conexion.Close();
+            }
+        }
+
     }
 }

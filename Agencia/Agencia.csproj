@@ -52,6 +52,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\AddEditMarcasForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\AddEditMarcasForm.Designer.cs">
+      <DependentUpon>AddEditMarcasForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\AddEditUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +107,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\AddEditMarcasForm.resx">
+      <DependentUpon>AddEditMarcasForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\AddEditUsuarios.resx">
       <DependentUpon>AddEditUsuarios.cs</DependentUpon>

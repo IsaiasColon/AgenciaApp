@@ -45,6 +45,7 @@ namespace Agencia.Formularios
                 txtUsuario.Text = usuario.NombreUsuario;
                 txtPassword.Text = usuario.Password;
                 txtPassword2.Text = usuario.Password;
+                //cmbTipo.SelectedText = usuario.Tipo;
                 cmbTipo.SelectedText = usuario.Tipo;
             }
             else
