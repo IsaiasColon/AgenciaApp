@@ -11,89 +11,71 @@ namespace Agencia.Gestion
     public class ModelosCRUD
     {
         // Conexion a la base de datos
-        public string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=AgenciaAutomotriz; Integrated Security = True";
+        public string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=AgenciaDB; Integrated Security = True";
 
-        // Metodo para crear nuevos registros
-        public void Agregar(string marca, string modelo, string tipo, string color)
+        public void AgregarModelo(int marca, string nombre, string tipo, string color, int total, int año, int puertas, string motor, string transmision)
         {
             using (SqlConnection conexion = new SqlConnection(connectionString))
             {
                 conexion.Open();
-                SqlCommand cmd = new SqlCommand("AgregarAutomovil", conexion);
-                //cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("Marca", marca);
-                cmd.Parameters.AddWithValue("Modelo", modelo);
-                cmd.Parameters.AddWithValue("Tipo", tipo);
-                cmd.Parameters.AddWithValue("Color", color);
+                string comando = 
+                    string.Format("INSERT INTO Modelos (" +
+                    "Marca, Nombre, Tipo, Color, " +
+                    "Total, Año, Puertas, Motor, Transmision" +
+                    ") VALUES (" +
+                    "'{0}', '{1}', '{2}', '{3}', " +
+                    "'{4}','{5}', '{6}', '{7}', '{8}')", 
+                    marca, nombre, tipo, color, total, año, puertas, motor, transmision);
 
-                cmd.ExecuteNonQuery();
+                using (SqlCommand cmd = new SqlCommand(comando, conexion))
+                {
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    reader.Close();
+                }
             }
         }
+
         // Metodo para leer los registros
         public List<Modelos> Read()
         {
             using (var conexion = new SqlConnection(connectionString))
             {
                 conexion.Open();
-                SqlCommand cmd = new SqlCommand("ObtenerAutos", conexion);
-                //cmd.CommandType = CommandType.StoredProcedure;
-                SqlDataReader reader = cmd.ExecuteReader();
+                SqlCommand command = new SqlCommand("SELECT Id, Marca, Nombre, Tipo, Color, Total, Año, Puertas, Motor, Transmision FROM Modelos;", conexion);
 
-                List<Modelos> automoviles = new List<Modelos>();
+                SqlDataReader reader = command.ExecuteReader();
+
+                List<Modelos> modelos = new List<Modelos>();
+
                 int id = 0;
                 int marca = 0;
                 string nombre = "";
                 string tipo = "";
                 string color = "";
                 int total = 0;
+                int año = 0;
+                int puertas = 0;
+                string motor = "";
+                string transmision = "";
 
                 while (reader.Read())
                 {
                     id = (int)reader[0];
                     marca = (int)reader[1];
-                    nombre = reader[2].ToString();
-                    tipo = reader[3].ToString();
-                    color = reader[4].ToString();
-                    total = (int)reader[5];
+                    nombre = reader[1].ToString();
 
-                    Modelos automovil = new Modelos() { Id = id, Marca = marca, Nombre = nombre, Tipo = tipo, Color = color, Total = total };
-                    automoviles.Add(automovil);
+                    Modelos modelo = new Modelos() { 
+                        Id = id, Marca = marca, Nombre = nombre,
+                        Tipo = tipo, Color = color,
+                        Total = total, Año = año, Puertas = puertas,
+                        Motor = motor, Transmision = transmision
+                    };
+
+                    modelos.Add(modelo);
                 }
 
                 reader.Close();
-                return automoviles;
-            }
-        }
-
-        // Metodo para actualizar o modificar los registros
-        public void Modificar(Modelos automovil)
-        {
-            using (SqlConnection conexion = new SqlConnection(connectionString))
-            {
-                conexion.Open();
-                SqlCommand cmd = new SqlCommand("ModificarAutomovil", conexion);
-                //cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("Id", automovil.Id);
-                cmd.Parameters.AddWithValue("Marca", automovil.Marca);
-                cmd.Parameters.AddWithValue("Modelo", automovil.Nombre);
-                cmd.Parameters.AddWithValue("Tipo", automovil.Tipo);
-                cmd.Parameters.AddWithValue("Color", automovil.Color);
-
-                cmd.ExecuteNonQuery();
-            }
-        }
-
-        // Metodo para borrar registros
-        public void Eliminar(int id)
-        {
-            using (SqlConnection conexion = new SqlConnection(connectionString))
-            {
-                conexion.Open();
-                SqlCommand cmd = new SqlCommand("EliminarAutomovil", conexion);
-                //cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("Id", id);
-
-                cmd.ExecuteNonQuery();
+                return modelos;
             }
         }
     }
