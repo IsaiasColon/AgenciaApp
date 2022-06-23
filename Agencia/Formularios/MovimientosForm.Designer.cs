@@ -28,83 +28,53 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnConfirmar = new System.Windows.Forms.Button();
-            this.lblTipo = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.txtCantidad = new System.Windows.Forms.TextBox();
-            this.lblTitulo = new System.Windows.Forms.Label();
+            this.btnCerrar = new System.Windows.Forms.Button();
+            this.dgvMovimientos = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMovimientos)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnConfirmar
+            // btnCerrar
             // 
-            this.btnConfirmar.Location = new System.Drawing.Point(108, 110);
-            this.btnConfirmar.Name = "btnConfirmar";
-            this.btnConfirmar.Size = new System.Drawing.Size(75, 23);
-            this.btnConfirmar.TabIndex = 17;
-            this.btnConfirmar.Text = "Confirmar";
-            this.btnConfirmar.UseVisualStyleBackColor = true;
+            this.btnCerrar.Location = new System.Drawing.Point(532, 197);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(75, 23);
+            this.btnCerrar.TabIndex = 12;
+            this.btnCerrar.Text = "Cerrar";
+            this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
-            // lblTipo
+            // dgvMovimientos
             // 
-            this.lblTipo.AutoSize = true;
-            this.lblTipo.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.lblTipo.Location = new System.Drawing.Point(95, 87);
-            this.lblTipo.Name = "lblTipo";
-            this.lblTipo.Size = new System.Drawing.Size(62, 13);
-            this.lblTipo.TabIndex = 16;
-            this.lblTipo.Text = "(- Entrada -)";
+            this.dgvMovimientos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMovimientos.Location = new System.Drawing.Point(12, 41);
+            this.dgvMovimientos.MultiSelect = false;
+            this.dgvMovimientos.Name = "dgvMovimientos";
+            this.dgvMovimientos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvMovimientos.Size = new System.Drawing.Size(595, 150);
+            this.dgvMovimientos.TabIndex = 11;
             // 
-            // label2
+            // label1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 64);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 13);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "Cantidad";
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Location = new System.Drawing.Point(41, 110);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(61, 23);
-            this.btnCancelar.TabIndex = 14;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            // 
-            // txtCantidad
-            // 
-            this.txtCantidad.Location = new System.Drawing.Point(68, 64);
-            this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(115, 20);
-            this.txtCantidad.TabIndex = 13;
-            // 
-            // lblTitulo
-            // 
-            this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(65, 11);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(85, 18);
-            this.lblTitulo.TabIndex = 12;
-            this.lblTitulo.Text = "Movimiento";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(281, 8);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(66, 13);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Movimientos";
             // 
             // MovimientosForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(203, 149);
-            this.Controls.Add(this.btnConfirmar);
-            this.Controls.Add(this.lblTipo);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.txtCantidad);
-            this.Controls.Add(this.lblTitulo);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.ClientSize = new System.Drawing.Size(622, 231);
+            this.Controls.Add(this.btnCerrar);
+            this.Controls.Add(this.dgvMovimientos);
+            this.Controls.Add(this.label1);
             this.Name = "MovimientosForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MovimientosForm";
+            this.Load += new System.EventHandler(this.MovimientosForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMovimientos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -112,11 +82,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnConfirmar;
-        private System.Windows.Forms.Label lblTipo;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.TextBox txtCantidad;
-        private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.Button btnCerrar;
+        private System.Windows.Forms.DataGridView dgvMovimientos;
+        private System.Windows.Forms.Label label1;
     }
 }

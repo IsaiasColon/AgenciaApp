@@ -58,6 +58,18 @@
     <Compile Include="Formularios\AddEditMarcasForm.Designer.cs">
       <DependentUpon>AddEditMarcasForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\AddEditModelosForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\AddEditModelosForm.Designer.cs">
+      <DependentUpon>AddEditModelosForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\AddEditMovimientos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\AddEditMovimientos.Designer.cs">
+      <DependentUpon>AddEditMovimientos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\AddEditUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +122,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\AddEditMarcasForm.resx">
       <DependentUpon>AddEditMarcasForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\AddEditModelosForm.resx">
+      <DependentUpon>AddEditModelosForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\AddEditMovimientos.resx">
+      <DependentUpon>AddEditMovimientos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\AddEditUsuarios.resx">
       <DependentUpon>AddEditUsuarios.cs</DependentUpon>
