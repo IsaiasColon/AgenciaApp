@@ -47,6 +47,8 @@
             this.marcasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verMarcasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarMarcasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.movimientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.movimientosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvModelos)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -172,7 +174,8 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.usuariosToolStripMenuItem,
-            this.marcasToolStripMenuItem});
+            this.marcasToolStripMenuItem,
+            this.movimientosToolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(642, 24);
@@ -191,14 +194,14 @@
             // verUsuariosToolStripMenuItem
             // 
             this.verUsuariosToolStripMenuItem.Name = "verUsuariosToolStripMenuItem";
-            this.verUsuariosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.verUsuariosToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.verUsuariosToolStripMenuItem.Text = "Ver";
             this.verUsuariosToolStripMenuItem.Click += new System.EventHandler(this.verUsuariosToolStripMenuItem_Click);
             // 
             // agregarUsuariosToolStripMenuItem
             // 
             this.agregarUsuariosToolStripMenuItem.Name = "agregarUsuariosToolStripMenuItem";
-            this.agregarUsuariosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.agregarUsuariosToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.agregarUsuariosToolStripMenuItem.Text = "Agregar";
             this.agregarUsuariosToolStripMenuItem.Click += new System.EventHandler(this.agregarUsuariosToolStripMenuItem_Click);
             // 
@@ -214,16 +217,28 @@
             // verMarcasToolStripMenuItem
             // 
             this.verMarcasToolStripMenuItem.Name = "verMarcasToolStripMenuItem";
-            this.verMarcasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.verMarcasToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.verMarcasToolStripMenuItem.Text = "Ver";
             this.verMarcasToolStripMenuItem.Click += new System.EventHandler(this.verMarcasToolStripMenuItem_Click);
             // 
             // agregarMarcasToolStripMenuItem
             // 
             this.agregarMarcasToolStripMenuItem.Name = "agregarMarcasToolStripMenuItem";
-            this.agregarMarcasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.agregarMarcasToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.agregarMarcasToolStripMenuItem.Text = "Agregar";
             this.agregarMarcasToolStripMenuItem.Click += new System.EventHandler(this.agregarMarcasToolStripMenuItem_Click);
+            // 
+            // movimientosToolStripMenuItem
+            // 
+            this.movimientosToolStripMenuItem.Name = "movimientosToolStripMenuItem";
+            this.movimientosToolStripMenuItem.Size = new System.Drawing.Size(32, 19);
+            this.movimientosToolStripMenuItem.Text = "Movimientos";
+            // 
+            // movimientosToolStripMenuItem1
+            // 
+            this.movimientosToolStripMenuItem1.Name = "movimientosToolStripMenuItem1";
+            this.movimientosToolStripMenuItem1.Size = new System.Drawing.Size(89, 20);
+            this.movimientosToolStripMenuItem1.Text = "Movimientos";
             // 
             // PanelForm
             // 
@@ -275,5 +290,7 @@
         private System.Windows.Forms.ToolStripMenuItem marcasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem verMarcasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem agregarMarcasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem movimientosToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem movimientosToolStripMenuItem;
     }
 }

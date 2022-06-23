@@ -127,9 +127,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(115, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 13);
+            this.label1.Size = new System.Drawing.Size(88, 13);
             this.label1.TabIndex = 50;
-            this.label1.Text = "Agregar Login";
+            this.label1.Text = "Agregar Ususario";
             // 
             // txtPassword2
             // 
