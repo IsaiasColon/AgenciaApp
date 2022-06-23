@@ -66,5 +66,37 @@ namespace Agencia.Gestion
                 return usuarios;
             }
         }
+
+        public void EditarUsuarios(int id, string nombreCompleto, string nombreUsuario, string password, string tipo)
+        {
+            using (SqlConnection conexion = new SqlConnection(connectionString))
+            {
+                conexion.Open();
+                string comando =
+                    string.Format("UPDATE Usuarios " +
+                    "SET NombreCompleto = '{0}', NombreUsuario = '{1}', " +
+                    "Password = '{2}', Tipo = '{3}' WHERE Id = {4}",
+                     nombreCompleto, nombreUsuario, password, tipo, id);
+
+                using (SqlCommand cmd = new SqlCommand(comando, conexion))
+                {
+                    var response = cmd.ExecuteNonQuery();                    
+                }
+                conexion.Close();
+            }
+        }
+
+        public void BorrarUsuarios(int id)
+        {
+            using (SqlConnection conexion = new SqlConnection(connectionString))
+            {
+                conexion.Open();
+                string comando = "DELETE FROM Usuarios WHERE Id = {0};";
+                SqlCommand command = new SqlCommand(string.Format(comando, id), conexion);
+
+                var response = command.ExecuteNonQuery();                
+                conexion.Close();
+            }
+        }
     }
 }
