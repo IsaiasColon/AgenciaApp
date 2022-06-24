@@ -33,22 +33,22 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtTipo = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtModelo = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.txtMarca = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtPuertas = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtAño = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtTotal = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtTransmision = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtMotor = new System.Windows.Forms.TextBox();
+            this.cmbMarcas = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // txtColor
@@ -92,12 +92,12 @@
             this.label3.TabIndex = 56;
             this.label3.Text = "Nombre";
             // 
-            // txtModelo
+            // txtNombre
             // 
-            this.txtModelo.Location = new System.Drawing.Point(81, 91);
-            this.txtModelo.Name = "txtModelo";
-            this.txtModelo.Size = new System.Drawing.Size(176, 20);
-            this.txtModelo.TabIndex = 52;
+            this.txtNombre.Location = new System.Drawing.Point(81, 91);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(176, 20);
+            this.txtNombre.TabIndex = 52;
             // 
             // label2
             // 
@@ -116,6 +116,7 @@
             this.btnAceptar.TabIndex = 57;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // btnCancelar
             // 
@@ -126,13 +127,7 @@
             this.btnCancelar.TabIndex = 59;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
-            // 
-            // txtMarca
-            // 
-            this.txtMarca.Location = new System.Drawing.Point(81, 65);
-            this.txtMarca.Name = "txtMarca";
-            this.txtMarca.Size = new System.Drawing.Size(176, 20);
-            this.txtMarca.TabIndex = 51;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // label1
             // 
@@ -144,12 +139,12 @@
             this.label1.TabIndex = 50;
             this.label1.Text = "Agregar Auto";
             // 
-            // textBox1
+            // txtPuertas
             // 
-            this.textBox1.Location = new System.Drawing.Point(81, 219);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(176, 20);
-            this.textBox1.TabIndex = 63;
+            this.txtPuertas.Location = new System.Drawing.Point(81, 219);
+            this.txtPuertas.Name = "txtPuertas";
+            this.txtPuertas.Size = new System.Drawing.Size(176, 20);
+            this.txtPuertas.TabIndex = 63;
             // 
             // label5
             // 
@@ -169,12 +164,12 @@
             this.label6.TabIndex = 65;
             this.label6.Text = "Puertas";
             // 
-            // textBox2
+            // txtAño
             // 
-            this.textBox2.Location = new System.Drawing.Point(81, 193);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(176, 20);
-            this.textBox2.TabIndex = 62;
+            this.txtAño.Location = new System.Drawing.Point(81, 193);
+            this.txtAño.Name = "txtAño";
+            this.txtAño.Size = new System.Drawing.Size(176, 20);
+            this.txtAño.TabIndex = 62;
             // 
             // label8
             // 
@@ -185,12 +180,12 @@
             this.label8.TabIndex = 64;
             this.label8.Text = "Total";
             // 
-            // textBox3
+            // txtTotal
             // 
-            this.textBox3.Location = new System.Drawing.Point(81, 167);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(176, 20);
-            this.textBox3.TabIndex = 61;
+            this.txtTotal.Location = new System.Drawing.Point(81, 167);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.Size = new System.Drawing.Size(176, 20);
+            this.txtTotal.TabIndex = 61;
             // 
             // label9
             // 
@@ -201,12 +196,12 @@
             this.label9.TabIndex = 72;
             this.label9.Text = "Transmision";
             // 
-            // textBox5
+            // txtTransmision
             // 
-            this.textBox5.Location = new System.Drawing.Point(81, 272);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(176, 20);
-            this.textBox5.TabIndex = 68;
+            this.txtTransmision.Location = new System.Drawing.Point(81, 272);
+            this.txtTransmision.Name = "txtTransmision";
+            this.txtTransmision.Size = new System.Drawing.Size(176, 20);
+            this.txtTransmision.TabIndex = 68;
             // 
             // label11
             // 
@@ -217,41 +212,50 @@
             this.label11.TabIndex = 70;
             this.label11.Text = "Motor";
             // 
-            // textBox6
+            // txtMotor
             // 
-            this.textBox6.Location = new System.Drawing.Point(81, 246);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(176, 20);
-            this.textBox6.TabIndex = 67;
+            this.txtMotor.Location = new System.Drawing.Point(81, 246);
+            this.txtMotor.Name = "txtMotor";
+            this.txtMotor.Size = new System.Drawing.Size(176, 20);
+            this.txtMotor.TabIndex = 67;
+            // 
+            // cmbMarcas
+            // 
+            this.cmbMarcas.FormattingEnabled = true;
+            this.cmbMarcas.Location = new System.Drawing.Point(81, 65);
+            this.cmbMarcas.Name = "cmbMarcas";
+            this.cmbMarcas.Size = new System.Drawing.Size(176, 21);
+            this.cmbMarcas.TabIndex = 73;
             // 
             // AddEditModelosForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(271, 334);
+            this.Controls.Add(this.cmbMarcas);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.txtTransmision);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtMotor);
+            this.Controls.Add(this.txtPuertas);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtAño);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtTotal);
             this.Controls.Add(this.txtColor);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtTipo);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtModelo);
+            this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.txtMarca);
             this.Controls.Add(this.label1);
             this.Name = "AddEditModelosForm";
             this.Text = "AddEditModelosForm";
+            this.Load += new System.EventHandler(this.AddEditModelosForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -264,21 +268,21 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtTipo;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtModelo;
+        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.TextBox txtMarca;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtPuertas;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtAño;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtTransmision;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtMotor;
+        private System.Windows.Forms.ComboBox cmbMarcas;
     }
 }

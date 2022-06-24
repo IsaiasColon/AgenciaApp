@@ -47,8 +47,8 @@
             this.marcasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verMarcasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarMarcasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.movimientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.movimientosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.movimientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvModelos)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -115,6 +115,7 @@
             this.btnCerrarSesion.TabIndex = 26;
             this.btnCerrarSesion.Text = "Cerrar Sesion";
             this.btnCerrarSesion.UseVisualStyleBackColor = true;
+            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
             // 
             // btnSalir
             // 
@@ -124,6 +125,7 @@
             this.btnSalir.TabIndex = 25;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnEliminar
             // 
@@ -151,6 +153,7 @@
             this.btnAgregar.TabIndex = 22;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // label1
             // 
@@ -228,17 +231,17 @@
             this.agregarMarcasToolStripMenuItem.Text = "Agregar";
             this.agregarMarcasToolStripMenuItem.Click += new System.EventHandler(this.agregarMarcasToolStripMenuItem_Click);
             // 
-            // movimientosToolStripMenuItem
-            // 
-            this.movimientosToolStripMenuItem.Name = "movimientosToolStripMenuItem";
-            this.movimientosToolStripMenuItem.Size = new System.Drawing.Size(32, 19);
-            this.movimientosToolStripMenuItem.Text = "Movimientos";
-            // 
             // movimientosToolStripMenuItem1
             // 
             this.movimientosToolStripMenuItem1.Name = "movimientosToolStripMenuItem1";
             this.movimientosToolStripMenuItem1.Size = new System.Drawing.Size(89, 20);
             this.movimientosToolStripMenuItem1.Text = "Movimientos";
+            // 
+            // movimientosToolStripMenuItem
+            // 
+            this.movimientosToolStripMenuItem.Name = "movimientosToolStripMenuItem";
+            this.movimientosToolStripMenuItem.Size = new System.Drawing.Size(32, 19);
+            this.movimientosToolStripMenuItem.Text = "Movimientos";
             // 
             // PanelForm
             // 

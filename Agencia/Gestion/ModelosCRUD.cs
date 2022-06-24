@@ -19,12 +19,8 @@ namespace Agencia.Gestion
             {
                 conexion.Open();
                 string comando = 
-                    string.Format("INSERT INTO Modelos (" +
-                    "Marca, Nombre, Tipo, Color, " +
-                    "Total, Año, Puertas, Motor, Transmision" +
-                    ") VALUES (" +
-                    "'{0}', '{1}', '{2}', '{3}', " +
-                    "'{4}','{5}', '{6}', '{7}', '{8}')", 
+                    string.Format(
+                        "INSERT INTO Modelos (Marca, Nombre, Tipo, Color, Total, Año, Puertas, Motor, Transmision) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}','{5}', '{6}', '{7}', '{8}')",
                     marca, nombre, tipo, color, total, año, puertas, motor, transmision);
 
                 using (SqlCommand cmd = new SqlCommand(comando, conexion))

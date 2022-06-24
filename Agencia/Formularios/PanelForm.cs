@@ -20,6 +20,8 @@ namespace Agencia.Formularios
         MarcasForm marcasForm;
         AddEditMarcasForm addEditMarcasForm;
 
+        AddEditModelosForm addEditModelosForm;
+
         ModelosCRUD clase = new ModelosCRUD();
         public PanelForm()
         {
@@ -30,7 +32,7 @@ namespace Agencia.Formularios
         {
             try
             {
-                //Configurar();
+                Configurar();
             }
             catch (Exception ex)
             {
@@ -99,6 +101,27 @@ namespace Agencia.Formularios
 
             addEditMarcasForm = new AddEditMarcasForm();
             addEditMarcasForm.Show();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            if (addEditModelosForm != null)
+            {
+                addEditModelosForm = null;
+            }
+
+            addEditModelosForm = new AddEditModelosForm();
+            addEditModelosForm.ShowDialog();
         }
     }
 }
